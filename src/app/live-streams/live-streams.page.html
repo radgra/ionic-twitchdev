@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Live Streams</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-segment [(ngModel)]="activeSegment">
+      <ion-segment-button value="developers">
+        <ion-label>Developers</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="all">
+        <ion-label>All</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-devs-stream-list *ngIf="activeSegment==='developers'"></app-devs-stream-list>
+  <app-all-stream-list *ngIf="activeSegment==='all'"></app-all-stream-list>
+</ion-content>

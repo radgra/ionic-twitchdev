@@ -1,0 +1,21 @@
+<ng-container *ngIf="streamers">
+  <div padding>
+    <span>{{streamers.length}} streams</span>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let streamer of streamers">
+      <!-- <div class="custom-item"> -->
+        <ion-avatar>
+          <ion-img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_melharucos-94x60.jpg"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h4 class="stream-title">{{streamer.user_name}}</h4>
+          <span class="stream-description">{{streamer.title}}</span>
+        </ion-label>
+        <ion-thumbnail>
+          <ion-img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_melharucos-94x60.jpg"></ion-img>
+        </ion-thumbnail>
+      <!-- </div> -->
+    </ion-item>
+  </ion-list>
+</ng-container>
