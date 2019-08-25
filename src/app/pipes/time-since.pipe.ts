@@ -14,6 +14,9 @@ export class TimeSincePipe implements PipeTransform {
     msec -= mm * 1000 * 60;
     var ss = Math.floor(msec / 1000);
     msec -= ss * 1000;
+    if(hh > 9) {
+      return `${hh}h`
+    }
     return `${hh}:${mm > 9  ? mm : '0'+mm}`;
   }
 

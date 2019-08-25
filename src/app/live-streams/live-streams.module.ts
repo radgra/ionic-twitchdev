@@ -1,3 +1,4 @@
+import { ViewerCountPipe } from './../pipes/viewer-count.pipe';
 import { AllStreamListComponent } from './all-stream-list/all-stream-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -24,6 +25,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LiveStreamsPage, AllStreamListComponent, DevsStreamListComponent, TimeSincePipe]
+  declarations: [LiveStreamsPage, AllStreamListComponent, DevsStreamListComponent, TimeSincePipe, ViewerCountPipe]
 })
 export class LiveStreamsPageModule {}
