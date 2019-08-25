@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./streamers.page.scss'],
 })
 export class StreamersPage implements OnInit {
+  activeSegment: 'developers' | 'all' = 'developers'
 
   constructor() { }
 
