@@ -1,0 +1,21 @@
+ion-icon {
+    margin-right: -0.05rem;
+    font-size: 18px;
+
+    &:first-child {
+        margin-left: -0.15rem;
+    }
+}
+
+:host {
+    display: block;
+}
+
+:host[big] ion-icon {
+    font-size: 30px;
+
+    &:first-child {
+        margin-left: -0.15rem;
+    }
+}
+

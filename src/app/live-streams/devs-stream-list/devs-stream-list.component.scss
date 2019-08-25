@@ -21,3 +21,61 @@ ion-label {
 .custom-item {
     display:flex;
 }
+
+.streamer-icon {
+    height:42px;
+    width:42px;
+    margin-bottom: 0.2rem;
+
+}
+
+.streamer-item {
+    --padding-start:0.5rem;
+    --inner-padding-end: 0px;
+    --padding-top:10px;
+    // --inner-padding-bottom:16px;
+}
+
+.custom-border {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom:13px;
+}
+
+.sub-thumbnail {
+    margin-top: 0.1rem;
+    font-size: 11px;
+    color: #757575;
+    span {
+        vertical-align: middle;
+        margin-left: 0.05rem;
+    }
+    ion-icon {
+        vertical-align: middle;
+    }
+}
+
+.first-column {
+    padding-left: 0px;
+}
+
+.tags-container {
+    margin-top:0.5rem;
+    ion-badge {
+        margin-right:0.2rem;
+        font-weight: 400;
+    }
+}
+
+.stream-count {
+    padding-bottom: 0.5rem;
+    ion-badge {
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        --padding-start:1rem;
+        --padding-end:1rem;
+    }
+    span {
+        vertical-align: middle;
+
+    }
+}

@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-
 import { IonicModule } from '@ionic/angular';
-
 import { LiveStreamsPage } from './live-streams.page';
 import { DevsStreamListComponent } from './devs-stream-list/devs-stream-list.component';
+import { TimeSincePipe } from '../pipes/time-since.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {
@@ -20,9 +20,10 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LiveStreamsPage, AllStreamListComponent, DevsStreamListComponent]
+  declarations: [LiveStreamsPage, AllStreamListComponent, DevsStreamListComponent, TimeSincePipe]
 })
 export class LiveStreamsPageModule {}
