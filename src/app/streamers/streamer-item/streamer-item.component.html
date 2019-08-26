@@ -1,0 +1,28 @@
+<ion-grid no-padding>
+    <ion-row no-padding>
+      <ion-col size="2" class="first-column">
+        <ion-avatar class="streamer-icon" no-margin no-padding>
+          <ion-img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_melharucos-94x60.jpg"></ion-img>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="10">
+        <div class="streamer-name">
+          <span>Griffin</span>
+          <app-star-rating [rating]="5"></app-star-rating>
+        </div>
+        <div class="last-stream">
+          <span>Last stream:</span>
+          <span>5 days ago</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="10" offset="2" class="custom-border">
+        <div class="tags-container">
+          <ion-badge color="tertiary">Dev</ion-badge>
+          <ion-badge color="primary">WebDev</ion-badge>
+          <ion-badge color="primary">Elixir</ion-badge>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

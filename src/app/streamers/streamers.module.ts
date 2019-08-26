@@ -9,6 +9,7 @@ import { IonicModule } from '@ionic/angular';
 import { StreamersPage } from './streamers.page';
 import { DevStreamersListComponent } from './dev-streamers-list/dev-streamers-list.component';
 import { SharedModule } from '../shared/shared.module';
+import { StreamerItemComponent } from './streamer-item/streamer-item.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,6 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [StreamersPage, AllStreamersListComponent, DevStreamersListComponent]
+  declarations: [StreamersPage, AllStreamersListComponent, DevStreamersListComponent, StreamerItemComponent]
 })
 export class StreamersPageModule {}

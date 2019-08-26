@@ -4,6 +4,7 @@
   </div>
   <ion-list>
     <ion-item *ngFor="let streamer of streamers" class="streamer-item" lines="none">
+      <app-streamer-item [streamer]="streamer"></app-streamer-item>
     </ion-item>
   </ion-list>
 </ng-container>

@@ -1,0 +1,46 @@
+:host {
+    display:block;
+    width:100%;
+}
+
+ion-thumbnail {
+    width:96px;
+    height:auto;
+}
+
+.streamer-name {
+    display:flex;
+    justify-content: space-between;
+}
+
+.last-stream {
+    display:flex;
+    justify-content: space-between;
+    font-size:14px;
+    color:#868486;
+}
+
+.streamer-icon {
+    height:42px;
+    width:42px;
+    margin-bottom: 0.2rem;
+
+}
+
+.custom-border {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom:13px;
+}
+
+
+.first-column {
+    padding-left: 0px;
+}
+
+.tags-container {
+    ion-badge {
+        margin-right:0.2rem;
+        font-weight: 400;
+    }
+}
+
