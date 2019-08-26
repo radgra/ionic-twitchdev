@@ -1,0 +1,53 @@
+.search-row {
+    display:flex;
+    align-items:center;
+}
+
+.first-column {
+    padding-left: 0px;
+}
+
+.streamer-icon {
+    height:42px;
+    width:42px;
+    margin-bottom: 0.2rem;
+
+}
+
+.custom-border {
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom:5px;
+    text-align: right;
+}
+
+.streamer-views {
+    color:#969696;
+    font-size:12px;
+}
+
+.streamer-name {
+    color:#222222;
+    font-size: 15px;
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+
+.streamer-description {
+    margin-top: 0.2rem;
+    span {
+        color:#6B6B6B;
+        font-size: 13px;
+        white-space:normal;
+    }
+
+}
+
+.streamer-type {
+    font-size: 12px;
+}
+
+
+ion-label {
+    line-height:1;
+    white-space:normal;
+}

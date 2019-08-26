@@ -27,4 +27,8 @@ export class StreamsService {
     // modele miec zapewne 2 modele z twitcha a)streams i users
     return of([1,2,3,4,5,6])
   }
+
+  findStreamer(name:string) {
+    return this.twitchService.findUser(name)
+  }
 }

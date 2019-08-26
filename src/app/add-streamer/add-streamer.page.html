@@ -5,12 +5,44 @@
 </ion-header>
 
 <ion-content>
-<ion-searchbar></ion-searchbar>
-<ng-container *ngIf="foundStreamers">
-  <ion-list>
-    <ion-item *ngFor="let streamer of foundStreamers">
-      <!-- Na razie moge pseudo strone zrobix a potem wystlizowac -->
-    </ion-item>
-  </ion-list>
-</ng-container>
+  <div class="search-row">
+    <ion-searchbar [(ngModel)]="searchInput"></ion-searchbar>
+    <ion-button fill="clear" (click)="onSearch()">
+      <ion-icon slot="icon-only" name="checkmark-circle" color="secondary"></ion-icon>
+    </ion-button>
+  </div>
+  <ng-container *ngIf="foundStreamers">
+    <ion-list>
+      <ion-item *ngFor="let streamer of foundStreamers" lines="none">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2" class="first-column">
+              <ion-avatar class="streamer-icon" no-margin no-padding>
+                <ion-img [src]="streamer.profile_image_url"></ion-img>
+              </ion-avatar>
+            </ion-col>
+            <ion-col size="7">
+              <ion-label>
+
+                <h4 class="streamer-name">{{streamer.display_name}}</h4>
+                <span class="streamer-views">Views: {{streamer.view_count}}</span>
+                <div class="streamer-description">
+                  <span>{{streamer.description}}</span>
+                </div>
+              </ion-label>
+
+            </ion-col>
+            <ion-col size="3">
+              <ion-text color="secondary" class="streamer-type">PARTNER</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="10" offset="2" class="custom-border">
+                <ion-button fill="clear">ADD STREAMER</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+  </ng-container>
 </ion-content>
