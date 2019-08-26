@@ -1,4 +1,4 @@
-import { AllStreamersComponent } from './all-streamers/all-streamers.component';
+import { AllStreamersListComponent } from './all-streamers-list/all-streamers-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -7,7 +7,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { StreamersPage } from './streamers.page';
-import { DevStreamersComponent } from './dev-streamers/dev-streamers.component';
+import { DevStreamersListComponent } from './dev-streamers-list/dev-streamers-list.component';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {
@@ -21,8 +22,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [StreamersPage, AllStreamersComponent, DevStreamersComponent]
+  declarations: [StreamersPage, AllStreamersListComponent, DevStreamersListComponent]
 })
 export class StreamersPageModule {}

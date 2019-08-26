@@ -28,6 +28,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'add-streamer',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../add-streamer/add-streamer.module').then(m => m.AddStreamerPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/live-streams',
         pathMatch: 'full'

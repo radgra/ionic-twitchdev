@@ -9,6 +9,7 @@ import { LiveStreamsPage } from './live-streams.page';
 import { DevsStreamListComponent } from './devs-stream-list/devs-stream-list.component';
 import { TimeSincePipe } from '../pipes/time-since.pipe';
 import { SharedModule } from '../shared/shared.module';
+import { StreamItemComponent } from './stream-item/stream-item.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LiveStreamsPage, AllStreamListComponent, DevsStreamListComponent, TimeSincePipe, ViewerCountPipe]
+  declarations: [LiveStreamsPage, AllStreamListComponent, DevsStreamListComponent, TimeSincePipe, ViewerCountPipe, StreamItemComponent]
 })
 export class LiveStreamsPageModule {}

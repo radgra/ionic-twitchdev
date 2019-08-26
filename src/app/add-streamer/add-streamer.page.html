@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Add Streamer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-searchbar></ion-searchbar>
+<ng-container *ngIf="foundStreamers">
+  <ion-list>
+    <ion-item *ngFor="let streamer of foundStreamers">
+      <!-- Na razie moge pseudo strone zrobix a potem wystlizowac -->
+    </ion-item>
+  </ion-list>
+</ng-container>
+</ion-content>

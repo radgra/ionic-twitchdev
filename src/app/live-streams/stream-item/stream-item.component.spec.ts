@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AllStreamersComponent } from './all-streamers.component';
+import { StreamItemComponent } from './stream-item.component';
 
-describe('AllStreamersComponent', () => {
-  let component: AllStreamersComponent;
-  let fixture: ComponentFixture<AllStreamersComponent>;
+describe('StreamItemComponent', () => {
+  let component: StreamItemComponent;
+  let fixture: ComponentFixture<StreamItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AllStreamersComponent ],
+      declarations: [ StreamItemComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AllStreamersComponent);
+    fixture = TestBed.createComponent(StreamItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

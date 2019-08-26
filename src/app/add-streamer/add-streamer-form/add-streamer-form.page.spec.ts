@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DevStreamersComponent } from './dev-streamers.component';
+import { AddStreamerFormPage } from './add-streamer-form.page';
 
-describe('DevStreamersComponent', () => {
-  let component: DevStreamersComponent;
-  let fixture: ComponentFixture<DevStreamersComponent>;
+describe('AddStreamerFormPage', () => {
+  let component: AddStreamerFormPage;
+  let fixture: ComponentFixture<AddStreamerFormPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DevStreamersComponent ],
+      declarations: [ AddStreamerFormPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DevStreamersComponent);
+    fixture = TestBed.createComponent(AddStreamerFormPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
