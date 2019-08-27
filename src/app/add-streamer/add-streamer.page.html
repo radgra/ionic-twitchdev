@@ -33,12 +33,12 @@
 
             </ion-col>
             <ion-col size="3">
-              <ion-text color="secondary" class="streamer-type">PARTNER</ion-text>
+              <ion-text color="secondary" class="streamer-type">{{streamer.broadcaster_type | uppercase }}</ion-text>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col size="10" offset="2" class="custom-border">
-                <ion-button fill="clear">ADD STREAMER</ion-button>
+                <ion-button fill="clear" (click)="onStreamerSelect(streamer)">ADD STREAMER</ion-button>
             </ion-col>
           </ion-row>
         </ion-grid>

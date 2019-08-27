@@ -1,9 +1,50 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>add-streamer-form</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Add Streamer</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/add-streamer"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="checkmark" color="success"></ion-icon>
+        </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content *ngIf="streamer">
+  <div class="main-image-container">
+    <ion-avatar>
+      <ion-img [src]="streamer.profile_image_url"></ion-img>
+    </ion-avatar>
+  </div>
+  <div class="streamer-name">
+    <h4>{{streamer.display_name}}</h4>
+  </div>
+  <div class="streamer-description">
+    <span class="key">Description</span>
+    <span class="desc">{{streamer.description}}</span>
+  </div>
+  <div class="streamer-rating">
+    <span>Rating</span>
+    <app-star-rating [rating]="5" big></app-star-rating>
+  </div>
+  <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          <ion-label>Streamer Type</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Dev Streamer</ion-label>
+          <ion-radio slot="start" value="biff" checked></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Game Streamer</ion-label>
+          <ion-radio slot="start" value="griff"></ion-radio>
+        </ion-item>
+    
+      </ion-radio-group>
+    </ion-list>
 </ion-content>

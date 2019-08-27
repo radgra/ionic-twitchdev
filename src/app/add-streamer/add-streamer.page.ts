@@ -2,6 +2,8 @@ import { tap } from 'rxjs/operators';
 import { StreamsService } from 'src/app/services/streams.service';
 import { Component, OnInit } from '@angular/core';
 import { UserTwitch } from '../models/user-twitch.model';
+import { AddStreamerService } from './add-streamer.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-streamer',
@@ -12,7 +14,8 @@ export class AddStreamerPage implements OnInit {
   foundStreamers:UserTwitch[]
   searchInput:string = "";
 
-  constructor(private streamsService:StreamsService) { }
+  constructor(private streamsService:StreamsService, 
+    private addStreamerService:AddStreamerService, private router:Router, private route:ActivatedRoute) { }
 
   ngOnInit() {
   }
@@ -26,7 +29,11 @@ export class AddStreamerPage implements OnInit {
     ).subscribe()
     
   }
+  
+  onStreamerSelect(streamer) {
+    this.addStreamerService.selectStreamer(streamer)
+    this.router.navigate(['./','form'],{relativeTo:this.route})
+  }
 
-  // Czy streamer form ma by page czy tylko componentem ?
 
 }
