@@ -7,5 +7,6 @@ export interface UserTwitch {
     description: string,
     profile_image_url: string,
     offline_image_url: string,
-    view_count: number   
+    view_count: number  
+    added?:boolean 
 }

@@ -1,13 +1,9 @@
 export interface StreamerFirebase {
-    id: string
-    user_id: string,
-    user_name: string,
-    game_id: string,
-    type: string,
-    title: string,
-    viewer_count: number,
-    started_at: string,
-    language: string,
-    thumbnail_url: string,
-    tag_ids: string[]
+    id?: string
+    name:string;
+    display_name:string
+    twitch_id:string;
+    rating?:number;
+    tags?:string[]
+    type: 'dev' | "game"
 }

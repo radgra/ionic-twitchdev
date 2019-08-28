@@ -1,7 +1,8 @@
+import { UserTwitch } from './../models/user-twitch.model';
 import { StreamTwitch } from './../models/stream-twitch.model';
 import { Injectable } from '@angular/core';
 import streamMock from './stream.mock';
-import { of } from 'rxjs';
+import { of, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -20,13 +21,13 @@ export class TwitchService {
     return of(this.streams)
   }
 
-  findUser(name:string) {
+  findUser(name:string):Observable<UserTwitch[]> {
     const headers = new HttpHeaders({
       "Client-ID":"cj84lmkieeuejx4eewqccr389dqp97"
     })
 
 
-    return this.http.get('https://api.twitch.tv/helix/users?login='+name,{headers}).pipe(
+    return this.http.get<UserTwitch[]>('https://api.twitch.tv/helix/users?login='+name,{headers}).pipe(
       map((data:any) => data.data)
     )
   }

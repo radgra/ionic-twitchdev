@@ -5,7 +5,7 @@
         <ion-back-button defaultHref="/tabs/add-streamer"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
-        <ion-button>
+        <ion-button (click)="onConfirm()">
           <ion-icon slot="icon-only" name="checkmark" color="success"></ion-icon>
         </ion-button>
     </ion-buttons>
@@ -30,19 +30,19 @@
     <app-star-rating [rating]="5" big></app-star-rating>
   </div>
   <ion-list>
-      <ion-radio-group>
+      <ion-radio-group [(ngModel)]="streamerType">
         <ion-list-header>
           <ion-label>Streamer Type</ion-label>
         </ion-list-header>
     
         <ion-item>
           <ion-label>Dev Streamer</ion-label>
-          <ion-radio slot="start" value="biff" checked></ion-radio>
+          <ion-radio slot="start" value="dev"></ion-radio>
         </ion-item>
     
         <ion-item>
           <ion-label>Game Streamer</ion-label>
-          <ion-radio slot="start" value="griff"></ion-radio>
+          <ion-radio slot="start" value="game"></ion-radio>
         </ion-item>
     
       </ion-radio-group>

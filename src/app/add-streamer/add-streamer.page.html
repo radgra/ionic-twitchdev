@@ -38,8 +38,9 @@
           </ion-row>
           <ion-row>
             <ion-col size="10" offset="2" class="custom-border">
-                <ion-button fill="clear" (click)="onStreamerSelect(streamer)">ADD STREAMER</ion-button>
-            </ion-col>
+                <ion-button fill="clear" (click)="onStreamerSelect(streamer)" *ngIf="!streamer.added">ADD STREAMER</ion-button>
+                <ion-text *ngIf="streamer.added" color="danger" class="streamer-exists">Streamer already added</ion-text>
+              </ion-col>
           </ion-row>
         </ion-grid>
       </ion-item>
