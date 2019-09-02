@@ -2,27 +2,27 @@
     <ion-row no-padding>
       <ion-col size="2" class="first-column">
         <ion-avatar class="streamer-icon" no-margin no-padding>
-          <ion-img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_melharucos-94x60.jpg"></ion-img>
+          <ion-img [src]="stream.user.profile_image_url"></ion-img>
         </ion-avatar>
         <div class="sub-thumbnail">
           <ion-icon name="person"></ion-icon>
-          <span>{{streamer.viewer_count | viewerCount}}</span>
+          <span>{{stream.stream.viewer_count | viewerCount}}</span>
         </div>
         <div class="sub-thumbnail">
           <ion-icon name="clock"></ion-icon>
-          <span>{{streamer.started_at | timeSince}}</span>
+          <span>{{stream.stream.started_at | timeSince}}</span>
         </div>
       </ion-col>
       <ion-col size="6">
         <ion-label>
-          <h4 class="stream-title">{{streamer.user_name}}</h4>
+          <h4 class="stream-title">{{stream.stream.user_name}}</h4>
           <app-star-rating [rating]="3"></app-star-rating>
-          <span class="stream-description">{{streamer.title}}</span>
+          <span class="stream-description">{{stream.stream.title}}</span>
         </ion-label>
       </ion-col>
       <ion-col size="4">
         <ion-thumbnail>
-          <ion-img src="https://static-cdn.jtvnw.net/previews-ttv/live_user_melharucos-94x60.jpg"></ion-img>
+          <ion-img [src]="stream.stream.thumbnail_url | streamThumbnail"></ion-img>
         </ion-thumbnail>
       </ion-col>
     </ion-row>

@@ -1,11 +1,11 @@
-<ng-container *ngIf="streamers">
+<ng-container *ngIf="streams">
   <div class="stream-count" padding>
     <ion-badge color="secondary">Live</ion-badge>
-    <span>{{streamers.length}} streams</span>
+    <span>{{streams.length}} streams</span>
   </div>
   <ion-list>
-    <ion-item *ngFor="let streamer of streamers" class="streamer-item" lines="none">
-      <app-stream-item [streamer]="streamer"></app-stream-item>
+    <ion-item *ngFor="let stream of streams" class="streamer-item" lines="none">
+      <app-stream-item [stream]="stream"></app-stream-item>
     </ion-item>
   </ion-list>
 </ng-container>

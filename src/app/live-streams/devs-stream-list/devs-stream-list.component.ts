@@ -1,6 +1,7 @@
+import { Streamer } from './../../models/streamer.model';
 import { StreamTwitch } from './../../models/stream-twitch.model';
 import { StreamsService } from './../../services/streams.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {tap} from 'rxjs/operators'
 
 @Component({
@@ -9,14 +10,12 @@ import {tap} from 'rxjs/operators'
   styleUrls: ['./devs-stream-list.component.scss'],
 })
 export class DevsStreamListComponent implements OnInit {
-  streamers:StreamTwitch[] // Potem moze przerobic w services na inna strukture modelu
-  constructor(private streamsService:StreamsService) { }
+  @Input() streams:Streamer[] // Potem moze przerobic w services na inna strukture modelu
+  constructor() { }
 
   ngOnInit() {
-    this.streamsService.getDevLiveStreams().pipe(
-      tap(streamers => this.streamers = streamers),
-      tap(console.log)
-    ).subscribe()
+    console.log(this.streams);
+    
   }
 
 }

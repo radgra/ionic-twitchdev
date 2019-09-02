@@ -1,3 +1,10 @@
-<p>
-  all-streamers works!
-</p>
+<ng-container *ngIf="streamers">
+  <div class="stream-count" padding>
+    <span>{{streamers.length}} Streamers</span>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let streamer of streamers" class="streamer-item" lines="none">
+      <app-streamer-item [streamer]="streamer"></app-streamer-item>
+    </ion-item>
+  </ion-list>
+</ng-container>

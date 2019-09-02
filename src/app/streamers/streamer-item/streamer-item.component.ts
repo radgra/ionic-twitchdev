@@ -1,3 +1,4 @@
+import { Streamer } from './../../models/streamer.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -6,9 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./streamer-item.component.scss'],
 })
 export class StreamerItemComponent implements OnInit {
-  @Input() streamer:any
+  @Input() streamer:Streamer
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.streamer);
+    
+  }
 
 }

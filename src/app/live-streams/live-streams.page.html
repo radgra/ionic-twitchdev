@@ -9,10 +9,10 @@
   </ion-toolbar>
   <ion-toolbar color="primary">
     <ion-segment [(ngModel)]="activeSegment">
-      <ion-segment-button value="developers">
+      <ion-segment-button value="devs">
         <ion-label>Developers</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="all">
+      <ion-segment-button value="games">
         <ion-label>All</ion-label>
       </ion-segment-button>
     </ion-segment>
@@ -20,6 +20,6 @@
 </ion-header>
 
 <ion-content>
-  <app-devs-stream-list *ngIf="activeSegment==='developers'"></app-devs-stream-list>
-  <app-all-stream-list *ngIf="activeSegment==='all'"></app-all-stream-list>
+  <app-devs-stream-list [streams]="devStreams$ | async" *ngIf="activeSegment==='devs'"></app-devs-stream-list>
+  <app-devs-stream-list [streams]="gameStreams$ | async" *ngIf="activeSegment==='games'"></app-devs-stream-list>
 </ion-content>
